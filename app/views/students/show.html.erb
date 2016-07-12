@@ -1,8 +1,7 @@
-<h1><%= @student.name %></h1>
 <ul>
   <% @notes.each do |note| %>
     <li>
-      <%= note.created_at.strftime("%a, %e %b") %> - 
+      <%= note.created_at.strftime("%a, %e %b") %> -
       <%= note.content %>
     </li>
   <% end %>

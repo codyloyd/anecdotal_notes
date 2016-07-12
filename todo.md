@@ -7,31 +7,35 @@ The basic goal of the app is to keep a database of kids and to allow the teacher
 the app is for teachers to _quickly_ jot down notes that they can associate with students in their classroom.  Teachers can then later review the notes, ordered by student/timestamp/context (i.e. reading time/recess etc.).  Teachers should be able to sort/edit notes and then print reports that they can share with administrators or parents.
 
 ## models:
-- Teacher
-  - has many classes
-  - has many students through classes
+- User
+  - has many student_groups
+  - has many students through student_groups
   - has many notes
   - columns:
     - name
     - email
     - password (use devise)
 - Student
-  - belongs to class
+  - belongs to student_group
   - has one teacher
   - columns
     - name
-    - class_id
-- Class
+    - student_group_id
+- StudentGroup (is a classroom, or a period)
   - belongs to teacher
   - has many students
   - columns
     - name
     - teacher_id
-- Note
+- Student Note
   - belongs to student
   - columns
+    - teacher_id
     - student_id
     - content
-    - context
+    - context?? (add later)
 - Context??
-  - not sure if I really need a model for this one...
+  - not sure if I really need a model for this one.
+
+## todo:
+- add validations for user/studentgroup/student name

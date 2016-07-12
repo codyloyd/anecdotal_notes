@@ -1,0 +1,7 @@
+<h1><%= @student_group.name %></h1>
+<h2>students:</h2>
+<ul>
+  <% @students.each do |student| %>
+    <li><%= link_to student.name, student %> | <%= student.notes.count %> notes</li>
+  <% end %>
+</ul>

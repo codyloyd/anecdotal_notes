@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'students/show'
+
+  devise_for :users
+  resources 'users'
+  resources 'student_group'
+  resources 'students'
+  resources 'student_notes'
+  root 'static_pages#home'
 end

@@ -10,7 +10,8 @@ the app is for teachers to _quickly_ jot down notes that they can associate with
 - make forms for creating a student_group
 - add context tag
 - figure out the select class then student stuff for creating a note quickly
-- add all the styling of course!
+- add authentication stuff.. so it redirects or fails gracefully for users not logged in.
+- create different home page for users not logged in.
 
 ## models:
 - User

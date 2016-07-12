@@ -10,8 +10,8 @@
         <li><%= link_to "Sign out", destroy_user_session_url, method: "delete"%></li>|
         <li><%= link_to "Profile", current_user %></li>
       <% else %>
-        <li><%= link_to "Log in", new_user_session_url %></li>
-        <li><%= link_to "Sign up", new_user_registration_url %></li>
+        <li><%= link_to "Log in", new_user_session_url %></li> or
+        <li><%= link_to "Sign up!", new_user_registration_url %></li>
       <% end %>
     </ul>
   </div>

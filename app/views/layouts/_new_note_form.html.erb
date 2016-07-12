@@ -1,6 +1,6 @@
 <%= form_for @note do |f| %>
 <!-- <%= f.text_field :student_id %> -->
 <%= f.text_area :content %><br>
-<%= f.select :student_id, Student.all.collect{|p| [p.name, p.id]} %>
+<%= f.select :student_id, current_user.students.collect{|p| [p.name, p.id]} %>
 <%= f.submit "create note" %>
 <% end %>

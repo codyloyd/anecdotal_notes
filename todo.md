@@ -6,6 +6,14 @@ The basic goal of the app is to keep a database of kids and to allow the teacher
 
 the app is for teachers to _quickly_ jot down notes that they can associate with students in their classroom.  Teachers can then later review the notes, ordered by student/timestamp/context (i.e. reading time/recess etc.).  Teachers should be able to sort/edit notes and then print reports that they can share with administrators or parents.
 
+## todo:
+- add validations for user/studentgroup/student name
+- allow editing and deleting notes
+- make forms for creating a student_group
+- add context tag
+- figure out the select class then student stuff for creating a note quickly
+- add all the styling of course!
+
 ## models:
 - User
   - has many student_groups
@@ -36,6 +44,3 @@ the app is for teachers to _quickly_ jot down notes that they can associate with
     - context?? (add later)
 - Context??
   - not sure if I really need a model for this one.
-
-## todo:
-- add validations for user/studentgroup/student name

@@ -1,6 +1,10 @@
 <%= form_for @note do |f| %>
 <!-- <%= f.text_field :student_id %> -->
 <%= f.text_area :content %><br>
+<% if params[:student_group] %>
+<%= f.select :student_id, StudentGroup.find(params[:student_group]).students.collect{|p| [p.name, p.id]} %>
+<% else %>
 <%= f.select :student_id, current_user.students.collect{|p| [p.name, p.id]} %>
+<% end %>
 <%= f.submit "create note" %>
 <% end %>

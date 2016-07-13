@@ -51,3 +51,21 @@ h1,h2,h3,h4,h5,h6 {
 .jumbotron {
   background-color: transparent;
 }
+
+.homepage-sidebar {
+  text-align: right;
+  margin-top: -35px;
+  ul {
+    list-style-type: none;
+    li {
+      font-size: 16px;
+    }
+  }
+}
+
+.alert {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

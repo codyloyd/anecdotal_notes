@@ -6,13 +6,13 @@ the app is for teachers to _quickly_ jot down notes that they can associate with
 
 ## todo:
 - add validations for user/studentgroup/student name
-- allow editing and deleting notes
-- make forms for creating a student_group/students
+- allow editing and deleting notes/classes/students
 - add context tag
-- figure out the select class then student stuff for creating a note quickly
 - add authentication stuff.. so it redirects or fails gracefully for users not logged in.
-- create different home page for users not logged in.
-
+- make viewing notes prettier
+- build mass-add students form/method
+- investigate Ajax solution for selecting class lists on home page
+- investigate omniauth for google sign-in 
 ## models:
 - User
   - has many student_groups

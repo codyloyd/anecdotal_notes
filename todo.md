@@ -7,7 +7,7 @@ the app is for teachers to _quickly_ jot down notes that they can associate with
 ## todo:
 - add validations for user/studentgroup/student name
 - allow editing and deleting notes
-- make forms for creating a student_group
+- make forms for creating a student_group/students
 - add context tag
 - figure out the select class then student stuff for creating a note quickly
 - add authentication stuff.. so it redirects or fails gracefully for users not logged in.

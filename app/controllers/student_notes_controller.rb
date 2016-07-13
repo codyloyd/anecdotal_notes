@@ -5,7 +5,7 @@ class StudentNotesController < ApplicationController
     note.content = params[:student_note][:content]
     if note.save
       flash[:success] = "note created!"
-      render "root_url"
+      redirect_to root_url
     else
       flash[:danger] = "uh oh.. something went wrong"
       redirect_to root_url

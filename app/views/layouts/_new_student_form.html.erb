@@ -1,0 +1,5 @@
+<%= form_for @new_student do |f| %>
+  <%= f.text_field :name %>
+  <%= f.hidden_field(:student_group_id, :value => @student_group.id) %>
+  <%= f.submit "Add Student" %>
+<% end %>

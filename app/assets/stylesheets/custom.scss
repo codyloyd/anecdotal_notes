@@ -9,6 +9,14 @@ $black: #222222;
 $header-font: "Nixie One";
 $main-font: "Ubuntu";
 
+@mixin box-shadow($x,$y) {
+  -webkit-box-shadow: 0px 0px $x 0px rgba(0,0,0,$y);
+  -moz-box-shadow: 0px 0px $x 0px rgba(0,0,0,$y);
+  box-shadow: 0px 0px $x 0px rgba(0,0,0,$y);
+}
+
+
+//main config
 body {
   background-color: $blue;
   color: $black;
@@ -23,12 +31,18 @@ h1,h2,h3,h4,h5,h6 {
   background-color: $white;
   margin-top: 50px;
   padding-bottom: 25px;
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
-  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+  @include box-shadow(15px,.25);
 }
 
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: inline-block;;
+}
 
+// header
 .header-nav {
   list-style-type: none;
   margin-top: 24px;
@@ -41,15 +55,17 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
+
+//home page
+.jumbotron {
+  background-color: transparent;
+}
+
 .new_student_note {
   textarea {
     height: 150px;
     width: 100%;
   }
-}
-
-.jumbotron {
-  background-color: transparent;
 }
 
 .homepage-sidebar {
@@ -62,6 +78,37 @@ h1,h2,h3,h4,h5,h6 {
     }
   }
 }
+// view student page:
+.student-notes {
+  list-style-type: none;
+  margin:auto;
+  padding: 0;
+  li{
+    border: 1px solid $black;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    min-height: 25px;
+    padding: 5px;
+    @include box-shadow(5px,.15);
+    .date {
+      border-bottom: 1px solid $black;
+    }
+    .content {
+      padding-top: 5px;
+
+    }
+    .links {
+      text-align: right;
+      margin-top: -20px;
+      padding-bottom: 5px;
+      * {
+        padding-left: 8px;
+      }
+    }
+  }
+}
+
+// responsive stuff.. media queries
 
 @media screen and (max-width: 480px) {
   .homepage-sidebar{
@@ -80,12 +127,4 @@ h1,h2,h3,h4,h5,h6 {
       width: 45%;
     }
   }
-}
-
-.alert {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: inline-block;;
 }

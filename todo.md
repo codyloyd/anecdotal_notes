@@ -9,8 +9,8 @@ the app is for teachers to _quickly_ jot down notes that they can associate with
 - allow editing and deleting notes/classes/students
 - add context tag
 - add links to GOTO student and GOTO class on the homepage
+- figure out collapsing dropdown in header menu
 - add authentication stuff.. so it redirects or fails gracefully for users not logged in.
-- make viewing notes prettier
 - build mass-add students form/method
 - investigate Ajax solution for selecting class lists on home page
 - investigate omniauth for google sign-in

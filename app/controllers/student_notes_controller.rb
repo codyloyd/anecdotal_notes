@@ -11,4 +11,17 @@ class StudentNotesController < ApplicationController
       redirect_to root_url
     end
   end
+  def edit
+    @note = StudentNote.find(params[:id])
+  end
+  def update
+    note = StudentNote.find(params[:id])
+    note.update_attributes(content: params[:student_note][:content])
+    redirect_to note.student
+  end
+  def destroy
+    note = StudentNote.find(params[:id])
+    note.delete
+    redirect_to note.student
+  end
 end

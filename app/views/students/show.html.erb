@@ -5,7 +5,7 @@
       <li>
         <div class="date"><%= note.created_at.strftime("%a, %e %b") %>
 
-          <div class="links"><%= link_to "", edit_student_note_path(note), class: "glyphicon glyphicon-edit" %>  <%= link_to "", student_note_path(note), method: "delete", class: "glyphicon glyphicon-remove" %></div>
+          <div class="links"><%= link_to "", edit_student_note_path(note), class: "glyphicon glyphicon-edit" %>  <%= link_to "", student_note_path(note), method: "delete", class: "glyphicon glyphicon-remove", alert: "really delete?" %></div>
         </div>
         <div class="content"><%= note.content %></div>
       </li>

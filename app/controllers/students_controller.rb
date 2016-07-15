@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
   def show
     @student = Student.find(params[:id])
-    @notes = @student.notes.all
+    @notes = @student.notes.all.order(created_at: "desc")
     @title = @student.name
   end
 

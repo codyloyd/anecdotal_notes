@@ -39,8 +39,16 @@ h1,h2,h3,h4,h5,h6 {
   top: 0;
   left: 0;
   right: 0;
+  height: 22px;
   display: inline-block;
+  padding-bottom: 2px;
   z-index: 7000;
+  text-align: center;
+  margin:0;
+  padding-top:0;
+  border-radius: 0;
+  background-color: $white;
+  color: $black;
 }
 
 // header
@@ -153,9 +161,5 @@ h1,h2,h3,h4,h5,h6 {
       display: block;
       margin-top: 10px;
     }
-  }
-  .alert {
-    top:auto;
-    bottom:0
   }
 }

@@ -6,5 +6,7 @@
 <%= f.select :student_id, current_user.students.collect{|p| [p.name, p.id]} %>
 <% end %>
 <%= f.submit "create note" %>
+<% if cookies[:selected_student_group_id] %>
 <%= link_to "Go to class",  StudentGroup.find(cookies[:selected_student_group_id]), class: "goto-class-link"%>
+<% end %>
 <% end %>

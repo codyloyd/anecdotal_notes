@@ -8,7 +8,9 @@ the app is for teachers to _quickly_ jot down notes that they can associate with
 - add validations for user/studentgroup/student name
 - allow editing and deleting notes/classes/students
 - add context tag
-- add links to GOTO student and GOTO class on the homepage
+- add links to GOTO student
+- add link to notes in flash display
+- fix flash display devise/bootstrap inconsistency
 - figure out collapsing dropdown in header menu
 - add authentication stuff.. so it redirects or fails gracefully for users not logged in.
 - build mass-add students form/method

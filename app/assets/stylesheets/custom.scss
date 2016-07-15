@@ -39,7 +39,8 @@ h1,h2,h3,h4,h5,h6 {
   top: 0;
   left: 0;
   right: 0;
-  display: inline-block;;
+  display: inline-block;
+  z-index: 7000;
 }
 
 // header
@@ -54,7 +55,10 @@ h1,h2,h3,h4,h5,h6 {
     margin-right: 5px;
   }
 }
-
+.dropdown {
+  position: relative;
+  float: right;
+}
 
 //home page
 .jumbotron {
@@ -65,6 +69,9 @@ h1,h2,h3,h4,h5,h6 {
   textarea {
     height: 150px;
     width: 100%;
+  }
+  .goto-class-link {
+    float:right;
   }
 }
 
@@ -111,6 +118,10 @@ h1,h2,h3,h4,h5,h6 {
 // responsive stuff.. media queries
 
 @media screen and (max-width: 480px) {
+  .main-body {
+    margin-top:20px;
+  }
+
   .homepage-sidebar{
     text-align: center;
     margin-top: 0;
@@ -126,5 +137,15 @@ h1,h2,h3,h4,h5,h6 {
     input[type="submit"] {
       width: 45%;
     }
+    .goto-class-link {
+      float: none;
+      width: 100%;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+  .alert {
+    top:auto;
+    bottom:0
   }
 }

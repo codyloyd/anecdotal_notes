@@ -1,10 +1,26 @@
 
 <div class="row">
-  <div class="col-xs-7">
+  <div class="col-md-7 col-xs-9">
     <h1><%= @title %></h1>
   </div>
-  <div class="col-xs-5">
-    <ul class="header-nav">
+  <div class="col-md-5 col-xs-3 header-right">
+    <div class="dropdown header-nav btn-group hidden-md hidden-lg">
+      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      menu <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu pull-right ">
+        <li><%= link_to "Home", root_url %></li>
+        <% if current_user %>
+          <li><%= link_to "Profile", current_user %></li>
+          <li role="separator" class="divider"></li>
+          <li><%= link_to "Sign out", destroy_user_session_url, method: "delete"%></li>
+          <% else %>
+          <li><%= link_to "Log in", new_user_session_url %></li>
+          <li><%= link_to "Sign up!", new_user_registration_url %></li>
+          <% end %>
+      </ul>
+    </div>
+    <ul class="header-nav hidden-sm hidden-xs">
       <li><%= link_to "Home", root_url %></li>|
       <% if current_user %>
         <li><%= link_to "Sign out", destroy_user_session_url, method: "delete"%></li>|

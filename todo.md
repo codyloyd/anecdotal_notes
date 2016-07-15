@@ -15,6 +15,7 @@ the app is for teachers to _quickly_ jot down notes that they can associate with
 - build mass-add students form/method
 - investigate Ajax solution for selecting class lists on home page
 - investigate omniauth for google sign-in
+
 ## models:
 - User
   - has many student_groups

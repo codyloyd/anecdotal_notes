@@ -6,10 +6,11 @@ the app is for teachers to _quickly_ jot down notes that they can associate with
 
 ## todo:
 - allow editing and deleting notes/classes/students
-- add validations for user/studentgroup/student name
+- add add name to sign up form
 - add context tag
 - add notes for classes
 - add new note form to student page
+- paginate notes
 - add links to GOTO student
 - add link to notes in flash display
 - fix flash display devise/bootstrap inconsistency
@@ -17,6 +18,7 @@ the app is for teachers to _quickly_ jot down notes that they can associate with
 - build mass-add students form/method
 - investigate Ajax solution for selecting class lists on home page
 - investigate omniauth for google sign-in
+- allow classes to be archived or deleted
 
 ## models:
 - User

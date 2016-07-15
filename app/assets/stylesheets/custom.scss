@@ -115,6 +115,16 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
+// edit notes page
+.edit_student_note {
+  input, textarea {
+    display: block;
+  }
+  textarea {
+    width: 100%;
+  }
+}
+
 // responsive stuff.. media queries
 
 @media screen and (max-width: 480px) {

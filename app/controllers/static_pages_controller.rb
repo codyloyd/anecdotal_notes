@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
   def home
     @note = StudentNote.new
     @title = "Anecdotal Notes"
+    @selected_class = StudentGroup.find(cookies[:selected_student_group_id]) if cookies[:selected_student_group_id]
     @student_groups = current_user.student_groups if user_signed_in?
     if params[:student_group]
       set_student_group_cookie(params[:student_group])

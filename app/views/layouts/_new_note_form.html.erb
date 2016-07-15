@@ -1,12 +1,12 @@
 <%= form_for @note do |f| %>
 <%= f.text_area :content %><br>
-<% if cookies[:selected_student_group_id] %>
-<%= f.select :student_id, StudentGroup.find(cookies[:selected_student_group_id]).students.collect{|p| [p.name, p.id]} %>
+<% if @selected_class %>
+<%= f.select :student_id, @selected_class.students.collect{|p| [p.name, p.id]} %>
 <% else %>
 <%= f.select :student_id, current_user.students.collect{|p| [p.name, p.id]} %>
 <% end %>
 <%= f.submit "create note" %>
-<% if cookies[:selected_student_group_id] %>
-<%= link_to "Go to class",  StudentGroup.find(cookies[:selected_student_group_id]), class: "goto-class-link"%>
+<% if @selected_class %>
+<%= link_to @selected_class.name,  @selected_class, class: "goto-class-link"%>
 <% end %>
 <% end %>

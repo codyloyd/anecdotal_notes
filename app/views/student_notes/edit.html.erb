@@ -1,4 +1,7 @@
-<%= form_for @note do |f| %>
-<%= f.text_area :content %>
-<%= f.submit %>
-<% end %>
+<div class="col-lg-8 col-lg-offset-2">
+  <h2><%= @note.created_at.strftime("%A, %e %B %Y") %> <br> for <%= @note.student.name.capitalize %></h2>
+  <%= form_for @note do |f| %>
+  <%= f.text_area :content %>
+  <%= f.submit %>
+  <% end %>
+</div>

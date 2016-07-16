@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:mbleigh/acts-as-taggable-on.git
+  remote: https://github.com/mbleigh/acts-as-taggable-on.git
   revision: 637da61074b5bd2e0ff0be50fd683588d61c4ed1
   specs:
     acts-as-taggable-on (4.0.0.pre)

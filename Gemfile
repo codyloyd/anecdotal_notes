@@ -11,7 +11,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'bootstrap-sass'
-gem 'acts-as-taggable-on' , :git => 'git@github.com:mbleigh/acts-as-taggable-on.git'
+gem 'acts-as-taggable-on' , :git => 'https://github.com/mbleigh/acts-as-taggable-on.git'
 
 group :development, :test do
   gem 'byebug', platform: :mri

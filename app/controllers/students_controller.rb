@@ -1,7 +1,11 @@
 class StudentsController < ApplicationController
   def show
     @student = Student.find(params[:id])
-    @notes = @student.notes.all.order(created_at: "desc")
+    if params[:tag]
+      @notes = @student.notes.tagged_with(params[:tag])
+    else
+      @notes = @student.notes.all.order(created_at: "desc")
+    end
     @title = @student.name
   end
 

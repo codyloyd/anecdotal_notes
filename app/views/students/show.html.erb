@@ -9,10 +9,18 @@
         </div>
         <div class="content"><%= note.content %></div>
         <% if note.context_list.length > 0 %>
-        <div class="contexts"><strong>Context:</strong> <%= note.context_list %></div>
+        <div class="contexts"><strong>Context:</strong>
+           <% note.context_list.each do |tag| %>
+           <%= link_to tag, tag_path(note.student.id,tag) %>
+           <% end %>
+
+        </div>
         <% end %>
       </li>
     <% end %>
 
   </ul>
+  <% if params[:tag] %>
+    <%= link_to "All Notes", @student %>
+  <% end %>
 </div>

@@ -1,6 +1,6 @@
 <%= form_for @note do |f| %>
-<%= f.text_area :content, placeholder: "add context tags such as: #reading #hallway #recess" %><br>
-<%= f.text_field :tag_list, placeholder: "add context tags here"%>
+<%= f.text_area :content, autofocus: true%><br>
+<%= f.text_field :tag_list, placeholder: "add context tags (separated by comma)"%>
 <% if @selected_class %>
 <%= f.select :student_id, @selected_class.students.collect{|p| [p.name, p.id]} %>
 <% else %>

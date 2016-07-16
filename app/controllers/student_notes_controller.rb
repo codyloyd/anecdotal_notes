@@ -4,8 +4,6 @@ class StudentNotesController < ApplicationController
     note.student_id = params[:student_note][:student_id].to_i
     note.content = params[:student_note][:content]
     note.context_list.add params[:student_note][:tag_list], parse: true
-    note.context_list.add(note.content.scan(/#\w+/).each{|t| t.delete!('#')})
-    note.context_list.each {|tag| note.content.gsub!("##{tag}","") }
     if note.save
       flash[:success] = "note created!"
       redirect_to root_url
@@ -21,6 +19,8 @@ class StudentNotesController < ApplicationController
   def update
     note = StudentNote.find(params[:id])
     note.update_attributes(content: params[:student_note][:content])
+    note.context_list.add params[:student_note][:tag_list], parse: true
+    note.save
     redirect_to note.student
   end
   def destroy

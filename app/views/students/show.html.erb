@@ -8,6 +8,9 @@
           <div class="links"><%= link_to "", edit_student_note_path(note), class: "glyphicon glyphicon-edit" %>  <%= link_to "", student_note_path(note), method: "delete", class: "glyphicon glyphicon-remove", alert: "really delete?" %></div>
         </div>
         <div class="content"><%= note.content %></div>
+        <% if note.context_list.length > 0 %>
+        <div class="contexts"><strong>Context:</strong> <%= note.context_list %></div>
+        <% end %>
       </li>
     <% end %>
 

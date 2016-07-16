@@ -3,6 +3,9 @@ class StudentNotesController < ApplicationController
     note = current_user.student_notes.new
     note.student_id = params[:student_note][:student_id].to_i
     note.content = params[:student_note][:content]
+    note.context_list.add params[:student_note][:tag_list], parse: true
+    note.context_list.add(note.content.scan(/#\w+/).each{|t| t.delete!('#')})
+    note.context_list.each {|tag| note.content.gsub!("##{tag}","") }
     if note.save
       flash[:success] = "note created!"
       redirect_to root_url

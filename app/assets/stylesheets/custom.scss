@@ -1,5 +1,5 @@
 //import fonts
-@import 'https://fonts.googleapis.com/css?family=Nixie+One|Ubuntu:300';
+@import 'https://fonts.googleapis.com/css?family=Nixie+One|Ubuntu:300,700';
 
 // variables and things:
 $blue:  #4898BD;
@@ -33,7 +33,9 @@ h1,h2,h3,h4,h5,h6 {
   padding-bottom: 25px;
   @include box-shadow(15px,.25);
 }
-
+strong{
+  font-weight: 700;
+}
 .alert {
   position: fixed;
   top: 0;
@@ -82,6 +84,7 @@ h1,h2,h3,h4,h5,h6 {
   .goto-class-link {
     float:right;
   }
+
 }
 
 .homepage-sidebar {
@@ -106,12 +109,15 @@ h1,h2,h3,h4,h5,h6 {
     min-height: 25px;
     padding: 5px;
     @include box-shadow(5px,.15);
+    .contexts {
+      border-top: 1px solid $black;
+      padding: 5px;
+    }
     .date {
       border-bottom: 1px solid $black;
     }
     .content {
-      padding-top: 5px;
-
+      padding: 5px;
     }
     .links {
       text-align: right;
@@ -136,10 +142,18 @@ h1,h2,h3,h4,h5,h6 {
 
 // responsive stuff.. media queries
 
+@media screen and (max-width: 992px) {
+
+  #student_note_tag_list {
+    width:100%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .main-body {
     margin-top:0px;
   }
+
 
   .homepage-sidebar{
     text-align: center;

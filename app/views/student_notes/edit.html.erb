@@ -2,7 +2,7 @@
   <h2><%= @note.created_at.strftime("%A, %e %B %Y") %> <br> for <%= @note.student.name.capitalize %></h2>
   <%= form_for @note do |f| %>
   <%= f.text_area :content %>
-  <%= f.text_field :tag_list, placeholder: "context tags (comma separated)" %>
+  <%= f.text_field :tag_list, value: @note.context_list.to_s%>
   <%= f.submit %>
   <% end %>
 </div>

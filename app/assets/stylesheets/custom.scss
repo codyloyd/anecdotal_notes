@@ -130,6 +130,14 @@ strong{
   }
 }
 
+.context-list {
+  text-align: center;
+  ul {
+    list-style-type: none;
+    padding:0;
+  }
+}
+
 // edit notes page
 .edit_student_note {
   input, textarea {
@@ -150,6 +158,22 @@ strong{
   #student_note_tag_list {
     width:100%;
   }
+}
+
+@media screen and (max-width: 1200px) {
+  .context-list{
+    text-align: left;
+    * {
+      display: inline-block;
+    }
+    ul {
+      li {
+        display: inline-block;
+        padding-left: 8px;
+      }
+    }
+  }
+
 }
 
 @media screen and (max-width: 480px) {

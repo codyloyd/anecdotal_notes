@@ -1,4 +1,12 @@
-<div class="col-lg-10 col-lg-offset-1">
+<div class="col-lg-2 col-lg-push-10 context-list">
+  <h4>contexts</h4>
+  <ul>
+    <% @context_list.each do |tag| %>
+    <li><%= link_to tag, tag_path(@student.id,tag) %></li>
+    <% end %>
+  </ul>
+</div>
+<div class="col-lg-9 col-lg-pull-1">
   <ul class="student-notes">
 
     <% @notes.each do |note| %>

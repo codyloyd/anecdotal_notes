@@ -7,6 +7,7 @@ class StudentsController < ApplicationController
       @notes = @student.notes.all.order(created_at: "desc")
     end
     @title = @student.name
+    @context_list = create_context_list
   end
 
   def create
@@ -20,5 +21,14 @@ class StudentsController < ApplicationController
       flash[:danger] = "Oops! try again!"
       redirect_to group
     end
+  end
+
+
+  private
+
+  def create_context_list
+    list = []
+    @student.notes.each { |note| note.context_list.each {|tag| list << tag }}
+    list.uniq
   end
 end

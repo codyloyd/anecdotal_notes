@@ -16,10 +16,11 @@ class StudentNotesController < ApplicationController
     @title = "Edit Note"
     @note = StudentNote.find(params[:id])
   end
+
   def update
     note = StudentNote.find(params[:id])
     note.update_attributes(content: params[:student_note][:content])
-    note.context_list.add params[:student_note][:tag_list], parse: true
+    note.context_list= (params[:student_note][:tag_list])
     note.save
     redirect_to note.student
   end

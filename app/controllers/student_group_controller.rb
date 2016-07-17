@@ -5,6 +5,7 @@ class StudentGroupController < ApplicationController
     @students = @student_group.students.all
     @title = @student_group.name
     @new_student = Student.new
+    authorize! :read, @student_group
   end
 
   def new

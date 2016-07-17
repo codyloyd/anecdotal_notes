@@ -1,4 +1,5 @@
 class StudentNotesController < ApplicationController
+  before_action :authenticate_user!
   def create
     note = current_user.student_notes.new
     note.student_id = params[:student_note][:student_id].to_i

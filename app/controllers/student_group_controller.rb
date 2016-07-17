@@ -1,4 +1,5 @@
 class StudentGroupController < ApplicationController
+  before_action :authenticate_user!
   def show
     @student_group = StudentGroup.find(params[:id])
     @students = @student_group.students.all

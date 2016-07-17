@@ -5,15 +5,12 @@ The basic goal of the app is to keep a database of kids and to allow the teacher
 the app is for teachers to _quickly_ jot down notes that they can associate with students in their classroom.  Teachers can then later review the notes, ordered by student/timestamp/context (i.e. reading time/recess etc.).  Teachers should be able to sort/edit notes and then print reports that they can share with administrators or parents.
 
 ## todo:
-- allow editing and deleting notes/classes/students
-- add add name to sign up form
-- add context tag
+- allow editing and deleting classes/students
 - add notes for classes
-- add new note form to student page
 - paginate notes
-- add links to GOTO student
 - add link to notes in flash display
-- fix flash display devise/bootstrap inconsistency
+- add links to GOTO student
+- add new note form to student page
 - add authentication stuff.. so it redirects or fails gracefully for users not logged in.
 - build mass-add students form/method
 - investigate Ajax solution for selecting class lists on home page

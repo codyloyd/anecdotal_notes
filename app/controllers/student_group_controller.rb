@@ -22,4 +22,27 @@ class StudentGroupController < ApplicationController
     end
   end
 
+  def edit
+    @title = "Edit Class"
+    @student_group = StudentGroup.find(params[:id])
+    authorize! :read, @student_group
+  end
+
+  def update
+    group = StudentGroup.find(params[:id])
+    group.update_attributes(name: params[:student_group][:name])
+    if group.save
+      redirect_to group
+    else
+      flash[:error] = group.errors.full_messages.to_sentence
+      redirect_to group
+    end
+  end
+
+  def destroy
+    group = StudentGroup.find(params[:id])
+    group.destroy
+    redirect_to group.teacher
+  end
+
 end

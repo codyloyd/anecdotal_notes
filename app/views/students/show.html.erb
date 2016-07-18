@@ -31,4 +31,5 @@
   <% if params[:tag] %>
     <%= link_to "All Notes", @student %>
   <% end %>
+  <%= link_to "Delete Student", student_path, method: "delete", class: "btn btn-danger"%>
 </div>

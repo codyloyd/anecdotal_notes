@@ -5,7 +5,7 @@
 $blue:  rgba(72, 152, 189, 1);
 $white: #f0f0f0;
 $black: #222222;
-$red: #ED303C;
+$red: #c9302f;
 $header-font: "Nixie One";
 $main-font: "Ubuntu";
 
@@ -127,6 +127,18 @@ strong{
     min-height: 25px;
     padding: 5px;
     @include box-shadow(5px,.15);
+    .glyphicon {
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    .glyphicon-remove {
+      margin-right: 6px;
+      color: lighten($red,11);
+      &:hover{
+        color: darken($red,5);
+      }
+    }
     .contexts {
       border-top: 1px solid $black;
       padding: 5px;

@@ -9,7 +9,7 @@ class StudentNotesController < ApplicationController
       flash[:success] = "note created!"
       redirect_to root_url
     else
-      flash[:danger] = "uh oh.. something went wrong"
+      flash[:danger] = note.errors.full_messages.to_sentence
       redirect_to root_url
     end
   end

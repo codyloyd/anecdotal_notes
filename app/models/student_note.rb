@@ -4,4 +4,5 @@ class StudentNote < ApplicationRecord
   acts_as_taggable
   acts_as_taggable_on :context
   validates :content, presence: true
+  validates :student, presence: true
 end

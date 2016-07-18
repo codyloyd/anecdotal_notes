@@ -10,6 +10,10 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def help
+    @title = "FAQ/Help"
+  end
+
   def set_student_group_cookie(id)
     if StudentGroup.where(id:id).count > 0
       cookies[:selected_student_group_id] = id

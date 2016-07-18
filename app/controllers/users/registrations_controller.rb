@@ -8,9 +8,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+    student_group = @user.student_groups.create(name:"sample class")
+    4.times do |i|
+      student_group.students.create(name:"student-#{i+1}")
+    end
+  end
 
   # GET /resource/edit
   # def edit

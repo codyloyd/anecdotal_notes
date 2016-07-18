@@ -8,6 +8,7 @@
 <% end %>
 <%= f.submit "create note" %>
 <% if @selected_class %>
-<%= link_to @selected_class.name,  @selected_class, class: "goto-class-link"%>
+
+<%= link_to "Go to #{@selected_class.name}",  @selected_class, class: "goto-class-link"%>
 <% end %>
 <% end %>

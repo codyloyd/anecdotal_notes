@@ -10,8 +10,9 @@
       </button>
       <ul class="dropdown-menu pull-right ">
         <% if current_user %>
-          <li><%= link_to "Home", root_url %></li>
+          <li><%= link_to "New Note", root_url %></li>
           <li><%= link_to "Profile", current_user %></li>
+          <li><%= link_to "Help", help_path %></li>
           <li role="separator" class="divider"></li>
           <li><%= link_to "Sign out", destroy_user_session_url, method: "delete"%></li>
           <% else %>
@@ -22,9 +23,10 @@
     </div>
     <ul class="header-nav hidden-sm hidden-xs">
       <% if current_user %>
-        <li><%= link_to "Home", root_url %></li>|
-        <li><%= link_to "Sign out", destroy_user_session_url, method: "delete"%></li>|
-        <li><%= link_to "Profile", current_user %></li>
+        <li><%= link_to "New note", root_url %></li>|
+        <li><%= link_to "Profile", current_user %></li>|
+        <li><%= link_to "Help", help_path %></li>|
+        <li><%= link_to "Sign out", destroy_user_session_url, method: "delete"%></li>
       <% else %>
         <li><%= link_to "Log in", new_user_session_url %></li> or
         <li><%= link_to "Sign up!", new_user_registration_url %></li>

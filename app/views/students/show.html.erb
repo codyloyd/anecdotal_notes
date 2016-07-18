@@ -13,7 +13,7 @@
       <li>
         <div class="date"><%= note.created_at.strftime("%a, %e %b") %>
 
-          <div class="links"><%= link_to "", edit_student_note_path(note), class: "glyphicon glyphicon-edit" %>  <%= link_to "", student_note_path(note), method: "delete", class: "glyphicon glyphicon-remove", alert: "really delete?" %></div>
+          <div class="links"><%= link_to "", edit_student_note_path(note), class: "glyphicon glyphicon-edit" %>  <%= link_to "", student_note_path(note), method: "delete", class: "glyphicon glyphicon-remove", data: {confirm: "Really delete?"}  %></div>
         </div>
         <div class="content"><%= note.content %></div>
         <% if note.context_list.length > 0 %>
@@ -31,5 +31,5 @@
   <% if params[:tag] %>
     <%= link_to "All Notes", @student %>
   <% end %>
-  <%= link_to "Delete Student", student_path, method: "delete", class: "btn btn-danger"%>
+  <%= link_to "Delete Student", student_path, method: "delete", class: "btn btn-danger", data: {confirm: "Really delete?"}%>
 </div>

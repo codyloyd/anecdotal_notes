@@ -14,7 +14,7 @@ class Users::SessionsController < Devise::SessionsController
   # DELETE /resource/sign_out
   def destroy
     super
-    cookie.delete(:selected_student_group_id)
+    cookies.delete(:selected_student_group_id)
   end
 
   # protected

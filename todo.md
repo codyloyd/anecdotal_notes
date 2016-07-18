@@ -5,9 +5,6 @@ The basic goal of the app is to keep a database of kids and to allow the teacher
 the app is for teachers to _quickly_ jot down notes that they can associate with students in their classroom.  Teachers can then later review the notes, ordered by student/timestamp/context (i.e. reading time/recess etc.).  Teachers should be able to sort/edit notes and then print reports that they can share with administrators or parents.
 
 ## todo:
-- *add authentication stuff.. so it redirects or fails gracefully for users not logged in.*
-    - from the net: "The easiest way to do this is when they're signed_in using current_user.whatever in replacement of User.find(....) etc.."
-    - otherwise look up cancan
 - allow editing and deleting classes/students
 - add notes for classes
 - paginate notes
@@ -19,6 +16,7 @@ the app is for teachers to _quickly_ jot down notes that they can associate with
 - investigate Ajax solution for selecting class lists on home page
 - investigate omniauth for google sign-in
 - allow classes to be archived or deleted
+- figure out pdf export
 
 ## models:
 - User

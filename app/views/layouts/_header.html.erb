@@ -9,8 +9,8 @@
       menu <span class="caret"></span>
       </button>
       <ul class="dropdown-menu pull-right ">
-        <li><%= link_to "Home", root_url %></li>
         <% if current_user %>
+          <li><%= link_to "Home", root_url %></li>
           <li><%= link_to "Profile", current_user %></li>
           <li role="separator" class="divider"></li>
           <li><%= link_to "Sign out", destroy_user_session_url, method: "delete"%></li>
@@ -21,8 +21,8 @@
       </ul>
     </div>
     <ul class="header-nav hidden-sm hidden-xs">
-      <li><%= link_to "Home", root_url %></li>|
       <% if current_user %>
+        <li><%= link_to "Home", root_url %></li>|
         <li><%= link_to "Sign out", destroy_user_session_url, method: "delete"%></li>|
         <li><%= link_to "Profile", current_user %></li>
       <% else %>

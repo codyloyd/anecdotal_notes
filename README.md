@@ -1,24 +1,5 @@
-# README
+# Anecdotal Notes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The basic goal of this webapp is to keep a database of students and to allow the teacher to add anecdotal and observational notes to the kids quickly and easily by typing the notes into their phone, tablet or computer.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+the app is for teachers to _quickly_ jot down notes that they can associate with students in their classroom.  Teachers can then later review the notes, ordered by student/timestamp/context (i.e. reading time/recess etc.).  Teachers should be able to sort/edit notes and then print reports that they can share with administrators or parents.

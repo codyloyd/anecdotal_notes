@@ -4,7 +4,7 @@
 - figure out pdf export
 - paginate notes
 - add notes for classes
-- allow classes to be archived or deleted
+- allow classes to be archived (still accessible, but not on the front-page, and in a separate list on the user's profile)
 - add links to GOTO student
 - add new note form to student page
 - investigate Ajax solution for selecting class lists on home page

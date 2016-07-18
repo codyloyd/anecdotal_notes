@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def show
     @student = Student.find(params[:id])
     if params[:tag]
@@ -10,6 +10,7 @@ class StudentsController < ApplicationController
     end
     @title = @student.name
     @context_list = create_context_list
+    authorize! :read, @student
   end
 
   def create

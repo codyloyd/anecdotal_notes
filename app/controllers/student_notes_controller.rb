@@ -13,9 +13,11 @@ class StudentNotesController < ApplicationController
       redirect_to root_url
     end
   end
+
   def edit
     @title = "Edit Note"
     @note = StudentNote.find(params[:id])
+    authorize! :read, @note
   end
 
   def update

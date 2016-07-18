@@ -78,6 +78,17 @@ strong{
   float: right;
 }
 
+//footer
+.footer {
+  color: $white;
+  margin-top: 15px;
+  font-size: 12px;
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
 //home page
 .jumbotron {
   background-color: transparent;

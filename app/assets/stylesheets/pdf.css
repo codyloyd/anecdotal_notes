@@ -1,0 +1,14 @@
+.notes {
+  width: 100%;
+  table-layout: fixed;
+  line-height: 1.2em;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  page-break-before: always; 
+}

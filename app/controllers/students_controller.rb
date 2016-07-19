@@ -10,6 +10,12 @@ class StudentsController < ApplicationController
     end
     @title = @student.name
     @context_list = create_context_list
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "report", layout: 'pdf.html.erb', page_size: "letter"
+      end
+    end
     authorize! :read, @student
   end
 

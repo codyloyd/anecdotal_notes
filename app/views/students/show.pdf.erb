@@ -1,0 +1,28 @@
+<h1>Notes for <%= @student.name %></h1>
+<h2>Class: <%= @student.student_group.name %>, Teacher: <%= @student.teacher.name %></h2>
+<% if params[:tag] %>
+<% end %>
+<table class="notes">
+  <col width="15%">
+  <col width="65%">
+  <col width="20%">
+  <tr>
+    <th>Date/Time</th>
+    <th>Content</th>
+    <th>Tags</th>
+  </tr>
+  <% @notes.each  do |note| %>
+    <tr>
+      <td>
+        <%= note.created_at.strftime("%a, %e %b") %> <br>
+        <%= note.created_at.strftime("%l:%M %p") %>
+      </td>
+      <td><%= note.content %></td>
+      <td>
+        <% note.context_list.each do |tag| %>
+        <%= tag %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>

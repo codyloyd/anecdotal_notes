@@ -1,4 +1,5 @@
 ## todo:
+- figure out timezone thing!
 - implement devise confirmation emails
 - investigate omniauth for google sign-in
 - figure out pdf export

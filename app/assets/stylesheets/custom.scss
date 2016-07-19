@@ -2,13 +2,12 @@
 @import 'https://fonts.googleapis.com/css?family=Nixie+One|Ubuntu:300,700';
 
 // variables and things:
-$blue:  rgba(72, 152, 189, 1);
+$blue:  #4898bd;
 $white: #f0f0f0;
 $black: #222222;
 $red: #c9302f;
 $header-font: "Nixie One";
 $main-font: "Ubuntu";
-
 @mixin box-shadow($x,$y) {
   -webkit-box-shadow: 0px 0px $x 0px rgba(0,0,0,$y);
   -moz-box-shadow: 0px 0px $x 0px rgba(0,0,0,$y);

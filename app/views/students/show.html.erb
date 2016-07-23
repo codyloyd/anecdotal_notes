@@ -1,10 +1,16 @@
 <div class="col-lg-2 col-lg-push-10 context-list">
-  <h4>tags</h4>
-  <ul>
-    <% @context_list.each do |tag| %>
-    <li><%= link_to tag, tag_path(@student.id,tag) %></li>
-    <% end %>
-  </ul>
+  <h4>filter</h4>
+  <% if params[:tag] %>
+  <p><%= link_to "Clear Filter", @student %></p>
+  <% end %>
+  <%= form_tag(student_path, method: "get", class: "filter-form") do %>
+    <%= label_tag "Select Tag" %>
+    <%= select_tag :tag, options_for_select(@context_list) %>
+    <%= date_field :date, :start_date, placeholder: "start date", 'data-provide' => "datepicker" %>
+    <%= date_field :date, :end_date, placeholder: "end date", 'data-provide' => "datepicker" %>
+    <%= submit_tag "Filter Notes", class: "btn btn-default"%>
+  <% end %>
+
 </div>
 <div class="col-lg-9 col-lg-pull-1">
   <ul class="student-notes">
@@ -28,8 +34,5 @@
     <% end %>
 
   </ul>
-  <% if params[:tag] %>
-    <p><%= link_to "All Notes", @student %></p>
-  <% end %>
   <p><%= link_to "Delete Student", student_path, method: "delete", class: "btn btn-danger btn-sm", data: {confirm: "Really delete?"}%></p>
 </div>

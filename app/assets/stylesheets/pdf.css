@@ -4,6 +4,7 @@
   line-height: 1.2em;
   border: 1px solid black;
   border-collapse: collapse;
+  font-family: serif;
 }
 
 th, td {

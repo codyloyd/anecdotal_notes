@@ -3,11 +3,10 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
-    if params[:tag]
-      @notes = @student.notes.tagged_with(params[:tag])
-    else
-      @notes = @student.notes.all.order(created_at: "desc")
-    end
+    @notes = @student.notes.all.order(created_at: "desc")
+    @notes = @notes.tagged_with(params[:tag]) if params[:tag].present?
+    @notes = @notes.after_date(params[:date][:start_date]) if params[:date]
+    @notes = @notes.before_date(params[:date][:end_date]) if params[:date]
     @title = @student.name
     @context_list = create_context_list
     respond_to do |format|
@@ -47,7 +46,7 @@ class StudentsController < ApplicationController
   private
 
   def create_context_list
-    list = []
+    list = [""]
     @student.notes.each { |note| note.context_list.each {|tag| list << tag }}
     list.uniq
   end

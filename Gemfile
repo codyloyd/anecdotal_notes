@@ -15,6 +15,8 @@ gem 'cancan'
 gem 'wkhtmltopdf-heroku'
 gem 'wicked_pdf'
 gem 'acts-as-taggable-on' , :git => 'https://github.com/mbleigh/acts-as-taggable-on.git'
+gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
+                              :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
 
 group :development, :test do
   gem 'byebug', platform: :mri

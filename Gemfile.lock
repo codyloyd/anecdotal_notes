@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/Nerian/bootstrap-datepicker-rails.git
+  revision: 1b0a7189da82daab9ccd96f5f106c4d0ca869d6b
+  specs:
+    bootstrap-datepicker-rails (1.6.1.1)
+      railties (>= 3.0)
+
+GIT
   remote: https://github.com/mbleigh/acts-as-taggable-on.git
   revision: 637da61074b5bd2e0ff0be50fd683588d61c4ed1
   specs:
@@ -186,6 +193,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on!
+  bootstrap-datepicker-rails!
   bootstrap-sass
   byebug
   cancan

@@ -107,7 +107,10 @@ strong{
 
 .homepage-sidebar {
   text-align: right;
-  margin-top: -35px;
+  margin-top: 0px;
+  h3 {
+    margin-top: 0;
+  }
   ul {
     list-style-type: none;
     li {
@@ -166,6 +169,10 @@ strong{
   }
 }
 
+select#tag {
+  width: 100%;
+}
+
 // edit notes page
 .edit_student_note {
   input, textarea {
@@ -205,14 +212,21 @@ strong{
 }
 
 @media screen and (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
   .main-body {
     margin-top:0px;
+  }
+
+  .notes-column {
+    padding:0;
   }
 
 
   .homepage-sidebar{
     text-align: center;
-    margin-top: 0;
+    margin-top: 0px;
     ul {
       padding: 0;
     }

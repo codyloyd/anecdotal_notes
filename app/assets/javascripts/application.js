@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= javascript_include_tag "http://code.jquery.com/jquery-1.10.0.min.js"
+//= javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"
 //= require bootstrap-sprockets
 //= require bootstrap-datepicker
 //= require turbolinks

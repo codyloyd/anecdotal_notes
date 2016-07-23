@@ -29,7 +29,7 @@
   <%= label_tag "Select Tag" %>
   <%= select_tag :tag, options_for_select(@context_list) %>
   <%= label_tag :date, "Select date range" %>
-  <%= date_field :date, :start_date, placeholder: "start date", 'data-provide' => "datepicker" %>
+  <%= date_field :date, :start_date, placeholder: "start date", 'data-provide' => "datepicker", id: "datetimepicker1" %>
   <%= date_field :date, :end_date, placeholder: "end date", 'data-provide' => "datepicker" %>
   <%= submit_tag "Filter Notes", class: "btn btn-default"%>
   <p><%= link_to "Clear Filter", @student %></p>

@@ -10,9 +10,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    student_group = @user.student_groups.create(name:"sample class")
-    4.times do |i|
-      student_group.students.create(name:"student-#{i+1}")
+    if @user.valid?
+      student_group = @user.student_groups.create(name:"sample class")
+      4.times do |i|
+        student_group.students.create(name:"student-#{i+1}")
+      end
+      UserMailer.welcome_email(@user).deliver_later
     end
   end
 

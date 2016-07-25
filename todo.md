@@ -2,7 +2,6 @@
 - student controller is a MESSSSSSS
   - date filters don't work on iphone
 - figure out pdf export issue..
-  - it's functional, but for some reason on heroku the styling isn't working as expected.
   - also: i'm not sure it works in conjunction with the filters.
   - make the table manually with divs instead of the table so that I can handle pagebreaks better
 

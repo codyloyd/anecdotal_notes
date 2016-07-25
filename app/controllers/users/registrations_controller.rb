@@ -15,7 +15,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       4.times do |i|
         student_group.students.create(name:"student-#{i+1}")
       end
-      UserMailer.welcome_email(@user).deliver_later
+      # UserMailer.welcome_email(@user).deliver_later
     end
   end
 

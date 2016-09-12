@@ -2,9 +2,10 @@
 - student controller is a MESSSSSSS
   - date filters don't work on iphone
 - figure out pdf export issue..
-  - also: i'm not sure it works in conjunction with the filters.
-  - make the table manually with divs instead of the table so that I can handle pagebreaks better
-
+  - also:it doesn't work in conjunction with the filters.
+  - make the table manually with divs instead of the table so that I can handle pagebreaks better.
+- user mailer on account creation is created, but commented out.  need to make the email a little nicer (Add some styling!)
+- add a guest account feature: https://github.com/plataformatec/devise/wiki/How-To:-Create-a-guest-user
 - figure out timezone thing!
 - implement devise confirmation emails
 - investigate omniauth for google sign-in

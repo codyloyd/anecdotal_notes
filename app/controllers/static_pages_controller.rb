@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  include StaticPagesHelper
+  
   def home
     @note = StudentNote.new
     @title = "Anecdotal Notes"
@@ -14,11 +16,5 @@ class StaticPagesController < ApplicationController
     @title = "FAQ/Help"
   end
 
-  def set_student_group_cookie(id)
-    if StudentGroup.where(id:id).count > 0
-      cookies[:selected_student_group_id] = id
-    else
-      cookies.delete(:selected_student_group_id)
-    end
-  end
+
 end

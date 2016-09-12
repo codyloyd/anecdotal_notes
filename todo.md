@@ -1,9 +1,8 @@
 ## todo:
-- student controller is a MESSSSSSS
-  - date filters don't work on iphone
+- rework home/profile page
+- bootstrapdatepicker doesn't work on iphone
 - figure out pdf export issue..
-  - also:it doesn't work in conjunction with the filters.
-  - make the table manually with divs instead of the table so that I can handle pagebreaks better.
+    - make the table manually with divs instead of the table so that I can handle pagebreaks better.
 - user mailer on account creation is created, but commented out.  need to make the email a little nicer (Add some styling!)
 - add a guest account feature: https://github.com/plataformatec/devise/wiki/How-To:-Create-a-guest-user
 - figure out timezone thing!
